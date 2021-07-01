@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/javaoop.iml" filepath="$PROJECT_DIR$/javaoop.iml" />
-      <module fileurl="file://$PROJECT_DIR$/shangke/shangke.iml" filepath="$PROJECT_DIR$/shangke/shangke.iml" />
+      <module fileurl="file://$PROJECT_DIR$/标准文档/shangke.iml" filepath="$PROJECT_DIR$/标准文档/shangke.iml" />
     </modules>
   </component>
 </project>
