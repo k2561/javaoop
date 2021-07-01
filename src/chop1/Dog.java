@@ -5,6 +5,10 @@ public class Dog {
     int health=100;               //健康值
     int love=0;                   //亲密度
     String strain="拉布拉多犬";     //品种
+    //无参构造方法
+    public Dog(){
+
+    }
     //输出
     public void show(){
         System.out.println("姓名是："+name);

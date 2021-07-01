@@ -7,7 +7,7 @@ public class TestMain {
         test1();
     }
     /*
-    * 测试狗狗的方法
+    * 测试方法
     * */
     public static void test1(){
         System.out.println("请输入你需要领养的宠物：1.狗 2.企鹅");
