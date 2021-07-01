@@ -7,7 +7,7 @@ public class Dog {
     String strain="拉布拉多犬";     //品种
     //无参构造方法
     public Dog(){
-
+        
     }
     //输出
     public void show(){
