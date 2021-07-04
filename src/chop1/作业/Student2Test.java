@@ -7,5 +7,4 @@ public class Student2Test {
         System.out.println(s1.introduction());
         System.out.println(s2.introduction());
     }
-
 }

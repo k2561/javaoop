@@ -1,5 +1,5 @@
 package chop1;
-
+//教师类
 public class Teacher {
     private int tid;
     private  String tname;
