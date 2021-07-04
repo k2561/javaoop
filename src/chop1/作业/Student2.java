@@ -1,4 +1,4 @@
-package chop1;
+package chop1.作业;
 
 class Student2 {
     private String name; //姓名

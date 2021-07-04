@@ -1,4 +1,4 @@
-package chop1;
+package chop1.作业;
 
 public class Student2Test {
     public static void main(String[] args) {

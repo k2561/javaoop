@@ -1,4 +1,4 @@
-package chop1;
+package chop1.作业;
 
 
 /**
