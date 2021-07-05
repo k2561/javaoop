@@ -7,6 +7,12 @@ public class Dog extends Pet{
         return strain;
     }
 
+    //实现父类的抽象方法
+    @Override
+    public void print() {
+        System.out.println("已重写");
+    }
+
     @Override
     public void show() {
         super.show();    //父类方法

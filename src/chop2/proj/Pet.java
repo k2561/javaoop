@@ -1,10 +1,13 @@
 package chop2.proj;
 //宠物
-public class Pet {
+//父类抽象(abstract)：防止父类的无意义调用
+public abstract class  Pet {
     private String name;
     private int health;
     private int love;
     String pass;
+    //方法重写(抽象方法：子类必须调用)
+    public abstract void print();
 
     public Pet(String name, int health, int love) {
         this.name = name;

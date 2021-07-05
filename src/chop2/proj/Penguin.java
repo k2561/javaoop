@@ -11,6 +11,11 @@ public class Penguin extends Pet{
     }
 
     @Override
+    public void print() {
+
+    }
+
+    @Override
     public void show() {
         super.show();
         super.pass="21";
