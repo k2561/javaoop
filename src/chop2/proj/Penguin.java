@@ -13,6 +13,7 @@ public class Penguin extends Pet{
     @Override
     public void show() {
         super.show();
+        super.pass="21";
         System.out.println("性别是："+this.sex);
     }
 
