@@ -15,6 +15,10 @@ public class Master {
         cat.eat();
     }
 
+    //喂宠物  父类作为行参，实现多态
+    public void feedPet(Pet pet){
+        pet.eat();
+    }
     public String getName() {
         return name;
     }

@@ -5,6 +5,10 @@ package chop3.proj;
  */
 public class Cat extends Pet{
     private String color;
+    //玩毛线
+    public void maoxian(){
+        System.out.println("和"+this.getName()+"玩毛线，亲密度加10");
+    }
 
     public String getColor() {
         return color;

@@ -9,6 +9,10 @@ public class Dog extends Pet{
     public String getStrain() {
         return strain;
     }
+    //接飞盘
+    public void play(){
+        System.out.println("和"+this.getName()+"玩接飞盘,亲密度加10");
+    }
 
     public void setStrain(String strain) {
         this.strain = strain;
