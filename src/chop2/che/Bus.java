@@ -40,4 +40,9 @@ public class Bus extends Car{
         super.show();
         System.out.println("载客数："+zai);
     }
+    //抽象方法的实现
+    @Override
+    public void shows() {
+        System.out.println("车的名字"+super.getName());
+    }
 }
