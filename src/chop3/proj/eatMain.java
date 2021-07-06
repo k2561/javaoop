@@ -28,7 +28,7 @@ public class eatMain {
         dog1.play();
         Cat cat1= (Cat)pet1;
         cat1.maoxian();
-        /** instanceof运算符的用法：防止对象错误
+        /** instanceof运算符的用法：避免类型转换异常
         Pet d1=new Dog();
         Cat c1= (Cat)d1;
         c1.maoxian();

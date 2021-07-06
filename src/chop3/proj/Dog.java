@@ -11,7 +11,7 @@ public class Dog extends Pet{
     }
     //接飞盘
     public void play(){
-        System.out.println("和"+this.getName()+"玩接飞盘,亲密度加10");
+        System.out.println("和"+this.getName()+"玩接飞盘,亲密度加"+(this.getLove()+10));
     }
 
     public void setStrain(String strain) {
