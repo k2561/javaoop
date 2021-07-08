@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class TestNum {
     public static void main(String[] args) {
-        test2();
+        test3();
     }
     //计算商
     static Scanner scanner=new Scanner(System.in);
@@ -89,4 +89,6 @@ public class TestNum {
         }
 
     }
+    //抛出异常
+    //捕获异常
 }
