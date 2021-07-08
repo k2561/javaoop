@@ -1,4 +1,4 @@
-package chop8.Doctor;
+package chop8.医院;
 
 /**
  *医生类

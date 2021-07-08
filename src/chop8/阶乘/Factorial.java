@@ -1,4 +1,4 @@
-package chop8.Factorial;
+package chop8.阶乘;
 
 import java.util.Scanner;
 

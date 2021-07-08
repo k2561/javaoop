@@ -1,4 +1,4 @@
-package chop8.InsuranceCalculater;
+package chop8.保险;
 
 /**
  *保险
