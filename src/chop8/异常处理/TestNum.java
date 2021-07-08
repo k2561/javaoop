@@ -59,7 +59,9 @@ public class TestNum {
             nums[3]=0;
             System.out.println(nums[3]);
         }catch (ArrayIndexOutOfBoundsException ae){
-            System.out.println("数组越界");
+            //错误:err标红处理
+            System.err.println("数组越界");
+            System.exit(1); // finally语句块不执行的唯一情况
         }finally {
             System.out.println("执行完成");
         }
