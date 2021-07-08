@@ -89,6 +89,4 @@ public class TestNum {
         }
 
     }
-    //抛出异常
-    //捕获异常
 }
