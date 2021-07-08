@@ -1,5 +1,7 @@
 package chop8.异常处理;
 
+import java.sql.SQLClientInfoException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -65,5 +67,26 @@ public class TestNum {
         }finally {
             System.out.println("执行完成");
         }
+    }
+    //多重catch块
+    public static void test3(){
+        try {
+            int num1=10;
+            int num2=0;
+            int shang=num1/num2;
+            System.out.println("商是："+shang);
+        }catch (ArrayIndexOutOfBoundsException ab){
+            System.out.println("数组越界");
+        }catch (ArithmeticException ae){
+            System.out.println("除数不能为零");
+        }catch (InputMismatchException ie){
+            System.out.println("输入的不是数字");
+        }catch (Exception ex){
+            //捕获所有异常放在最下面
+            System.out.println("出现错误了");
+        }finally {
+            System.out.println("程序结束");
+        }
+
     }
 }
