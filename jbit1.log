@@ -1,0 +1,9 @@
+2021-07-09 09:39:39chop8.异常处理.TestLog4j.main(TestLog4j.java:17) TestLog4j.java DEBUG 请输入第1位学生的成绩
+2021-07-09 09:39:41chop8.异常处理.TestLog4j.main(TestLog4j.java:17) TestLog4j.java DEBUG 请输入第2位学生的成绩
+2021-07-09 09:39:42chop8.异常处理.TestLog4j.main(TestLog4j.java:17) TestLog4j.java DEBUG 请输入第3位学生的成绩
+2021-07-09 09:39:43chop8.异常处理.TestLog4j.main(TestLog4j.java:23) TestLog4j.java DEBUG 输出的平均分是:748
+2021-07-09 09:39:43chop8.异常处理.TestLog4j.main(TestLog4j.java:30) TestLog4j.java DEBUG 程序结束
+2021-07-09 09:41:10chop8.异常处理.TestLog4j.main(TestLog4j.java:17) TestLog4j.java DEBUG 请输入第1位学生的成绩
+2021-07-09 09:41:14chop8.异常处理.TestLog4j.main(TestLog4j.java:26) TestLog4j.java ERROR 出现异常啦！
+2021-07-09 09:41:14chop8.异常处理.TestLog4j.main(TestLog4j.java:27) TestLog4j.java ERROR 异常信息是:null
+2021-07-09 09:41:14chop8.异常处理.TestLog4j.main(TestLog4j.java:30) TestLog4j.java DEBUG 程序结束
