@@ -10,7 +10,28 @@ import java.util.List;
 public class Test1 {
     @SuppressWarnings("unchecked")
     public static void main(String[] args) {
-
+        testArrayList();
+    }
+    public static void testArrayList(){
+        //创建ArrayList集合对象
+        List numlist=new ArrayList();
+        /**List接口特点
+         * List接口：存储的是一组不唯一，有序的对象
+         * a.ArrayList实现类：实现了长度可变的数组，遍历数据的时候效率比较高
+         * b.LinkedList实现类：采用链表存储方式，插入和删除元素的时候效率比较高
+         */
+        //添加数据
+        numlist.add(1);
+        numlist.add(2);
+        numlist.add(1);
+        numlist.add("张三");
+        numlist.add(true);
+        //遍历list集合
+        for (Object i:numlist) {
+            System.out.println(i);
+        }
+    }
+    public static void test(){
         // 1、创建多个狗狗对象
         Dog ououDog = new Dog("欧欧", "雪娜瑞");
         Dog yayaDog = new Dog("亚亚", "拉布拉多");
