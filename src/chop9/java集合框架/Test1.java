@@ -1,6 +1,7 @@
 package chop9.java集合框架;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 
@@ -10,16 +11,14 @@ import java.util.List;
 public class Test1 {
     @SuppressWarnings("unchecked")
     public static void main(String[] args) {
-        testArrayList();
+        testLinkedList();
     }
+    //List接口：存储的是一组不唯一，有序的对象
+
+    //创建ArrayList集合对象
     public static void testArrayList(){
-        //创建ArrayList集合对象
         List numlist=new ArrayList();
-        /**List接口特点
-         * List接口：存储的是一组不唯一，有序的对象
-         * a.ArrayList实现类：实现了长度可变的数组，遍历数据的时候效率比较高
-         * b.LinkedList实现类：采用链表存储方式，插入和删除元素的时候效率比较高
-         */
+        //ArrayList实现类：实现了长度可变的数组，遍历数据的时候效率比较高
         //添加数据
         numlist.add(1);
         numlist.add(2);
@@ -31,6 +30,43 @@ public class Test1 {
             System.out.println(i);
         }
     }
+    //LinkedList实现类：采用链表存储方式，插入和删除元素的时候效率比较高
+    public static void testLinkedList(){
+        List link=new LinkedList();
+        //add(Object o):将元素添加到集合中
+        link.add(1);
+        link.add("王五");
+        link.add(false);
+        //add(int i,Object o):将元素添加到集合的指定位置中
+        //给第一个位置添加数据
+        link.add(0,"2");
+        //给最后一个位置添加数据
+        link.add(link.size()-1,"张三");
+        for (Object i:link) {
+            System.out.println(i);
+        }
+        //contains:在集合中查找指定的元素
+        if(link.contains("王五")){
+            System.out.println("包含这个人");
+        }else {
+            System.out.println("不包含");
+        }
+        //size():统计集合中元素的个数
+        System.out.println("集合的长度是："+link.size());
+        //get(int i):根据下标来获取集合中的元素
+        System.out.println("集合的第二个元素："+link.get(2));
+        //remove:可以根据下标来删除元素，也可以直接根据元素来删除
+
+        //index下标从零开始
+        link.remove(3);
+        //o:object对象 类型随意
+        link.remove("王五");
+        System.out.println("删除之后的集合");
+        for (Object i:link) {
+            System.out.println(i);
+        }
+    }
+
     public static void test(){
         // 1、创建多个狗狗对象
         Dog ououDog = new Dog("欧欧", "雪娜瑞");
