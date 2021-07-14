@@ -44,7 +44,7 @@ public class TestList {
             System.out.println(str);
         }
     }
-    //
+    //遍历类
     public static void FanList1(){
         List<String> strings=new ArrayList<String>();
         Person person=new Person("王五",12,"男");
