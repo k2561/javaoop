@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class TestList {
     public static void main(String[] args) {
-        TestMap();
+        FanMap();
     }
     public static void testAddp(){
         Person person=new Person("王五",12,"男");
@@ -72,6 +72,23 @@ public class TestList {
         //判断是否包含中国这个值
         if(map.containsValue("中国")){
             System.out.println("包含");
+        }
+    }
+    //泛型Map集合
+    static void FanMap(){
+        Map<Integer ,String> map=new HashMap<Integer,String>();
+        map.put(1,"壹");
+        map.put(2,"贰");
+        map.put(3,"叁");
+        map.put(4,"肆");
+        //根据键获取值
+        for (Integer integer:map.keySet()){
+            System.out.println(map.get(integer));
+        }
+        //直接遍历值
+        System.out.println("遍历所有值");
+        for (String s:map.values()){
+            System.out.println(s);
         }
     }
 }
