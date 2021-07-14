@@ -1,9 +1,6 @@
 package chop9.java集合框架;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 测试
@@ -24,7 +21,7 @@ import java.util.Map;
  */
 public class TestList {
     public static void main(String[] args) {
-        FanMap();
+        iter();
     }
     public static void testAddp(){
         Person person=new Person("王五",12,"男");
@@ -103,6 +100,24 @@ public class TestList {
         System.out.println("遍历所有值");
         for (String s:map.values()){
             System.out.println(s);
+        }
+    }
+    //迭代器
+    static void iter(){
+        //Integer相当于int
+        List<Integer>list=new ArrayList<Integer>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        System.out.println("遍历输出");
+        for (Integer i:list){
+            System.out.println(i);
+        }
+        System.out.println("使用迭代器遍历输出");
+        Iterator iterator=list.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
         }
     }
 }
