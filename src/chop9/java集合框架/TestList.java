@@ -7,6 +7,20 @@ import java.util.Map;
 
 /**
  * 测试
+ * Vector和ArrayList的异同
+ * 实现原理相同，功能相同，很多情况下可以互用
+ * 两者的主要区别如下
+ * Vector线程安全，ArrayList重速度轻安全，线程非安全
+ * 长度需增长时，Vector默认增长一倍，ArrayList增长50%
+ *
+ * Hashtable和HashMap的异同
+ * 实现原理相同，功能相同，在很多情况下可以互用
+ * 两者的主要区别如下
+ * Hashtable继承Dictionary类，HashMap实现Map接口
+ * Hashtable线程安全，HashMap线程非安全
+ * Hashtable不允许null值，HashMap允许null值
+ *
+ * 开发过程中，最好使用ArrayList和HashMap
  */
 public class TestList {
     public static void main(String[] args) {
