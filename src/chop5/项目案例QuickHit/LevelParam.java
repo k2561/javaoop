@@ -1,4 +1,4 @@
-package chop5.quickhit;
+package chop5.项目案例QuickHit;
 
 /**
  * 级别参数类，配置各个级别参数。

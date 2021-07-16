@@ -1,4 +1,4 @@
-package chop5.quickhit;
+package chop5.项目案例QuickHit;
 
 /**
  * 玩家玩游戏。
