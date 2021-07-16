@@ -1,0 +1,16 @@
+//C#连接数据库
+public class Test{
+    string const="数据库连接字符串";
+    public static void main(string [] args){
+        Sqlconnection conn=new Sqlconnection(const);
+        string sql="select * from student";
+        conn.Open();
+        Sqlcommand cmd =new Sqlcommand(sql,conn);
+        SqlDataReader dr=new cmd.ExecuteReader();
+        while(dr.Read()){
+            Console.WriteLine(dr[0].ToString());
+            Console.WriteLine(dr[1].ToString());
+        }
+        conn.Close();
+    }
+}
