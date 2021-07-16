@@ -263,6 +263,64 @@ package chop7;
  *
  * 要注意过犹不及。
  * 在没有需求变化征兆的的情况下，不要使用单一职责原则对类进行过细拆分
+ *
+ *掌握面向对象设计原则之里氏代换原则
+ * 面向对象设计原则
+ * 在使用面向对象思想进行系统设计时，总结出了若干面向对象设计原则，分别是
+ * 单一职责原则
+ * 开闭原则
+ * 里氏代换原则
+ * 依赖注入原则
+ * 接口分离原则
+ * 迪米特原则
+ * 组合/聚合复用原则
+ * 这些原则是面向对象设计的基石，坚持这些原则是提升面向对象设计质量的重要保障
+ * 定义：
+ * LSP：Liskov Substitution Principle，Liskov是该原则的提出者
+ * 该原则的思想是：在任何父类出现的地方都可以用它的子类来代换，而不影响功能
+ *
+ * 里氏代换原则是对开闭原则的扩展
+ * 采用开闭原则必然用到抽象和多态，而这离不开继承
+ * 里氏代换原则就是对如何良好继承提出了衡量依据
+ *
+ * 企鹅继承鸟类不符合LSP，因为企鹅不会飞，不能完全代换父类
+ * class Bird {
+ * 	public void eat() {    }
+ * 	public void fly() {System.out.println("用翅膀飞");	}
+ * }
+ *
+ * class Penguin extends Bird {     }
+ *
+ * class Test {
+ * 	public static void showFly(Bird bird) { bird.fly(); }
+ * 	public static void main(String[] args) {
+ * 		showFly(new Bird());
+ * 		showFly(new Penguin());
+ *        }
+ * }
+ *
+ *
+ * 子类Dolphin无法代换父类Pet
+ * class Dolphin extends Pet {
+ * 	public void incrediBubble() {
+ * 	       System.out.println("神奇泡泡打砖块");}
+ * }
+ * public class Test {
+ * 	public static void showPlay(Pet pet) {
+ * 	       if (pet instanceof Dog) {
+ * 		Dog dog = (Dog) pet;   dog.catchingFlyDisc();
+ *                      } else if (pet instanceof Penguin) {
+ * 		Penguin pgn = (Penguin) pet;   pgn.swimmin    ); }
+ * 	}
+ * 	public static void main(String[] args) {
+ * 	       Dolphin dolphin = new Dolphin();
+ * 	       showPlay(dol    in);
+ * 	}
+ * }
+ *
+ * 总结：
+ * 里氏代换原则是对开闭原则的扩展
+ * 开闭原则的实现离不开继承，而里氏代换原则对如何良好继承提出了衡量依据
  */
 public class index {
 
