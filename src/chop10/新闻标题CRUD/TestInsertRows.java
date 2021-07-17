@@ -1,21 +1,19 @@
 package chop10.新闻标题CRUD;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
-import org.apache.log4j.Logger;
-//import cn.jbit.jdbctest.Test5;
+
 /**
- * 查询新闻标题信息。
+ * 使用PreparedStatement插入多条新闻标题。
  */
-public class TestQuery {
+public class TestInsertRows {
 
     public static void main(String[] args) {
         Connection conn = null;
-        Statement stmt = null;
-        ResultSet rs = null;
+        PreparedStatement pstmt = null;
         // 1、加载驱动
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -27,27 +25,28 @@ public class TestQuery {
             conn = DriverManager.getConnection(
                     "jdbc:sqlserver://localhost:1433;DatabaseName=news",
                     "jbit", "bdqn");
-            // 3、查询并输出新闻标题信息
-            stmt = conn.createStatement();
-            rs = stmt.executeQuery("select * from title");
-            System.out.println("\t\t新闻标题列表");
-            System.out.println("编号\t标题\t创建者\t创建时间");
-            while (rs.next()) {
-                System.out.print(rs.getInt(1)+"\t");
-                System.out.print(rs.getString(2)+"\t");
-                System.out.print(rs.getString(3)+"\t");
-                System.out.println(rs.getDate(4));
-            }
+            // 3、插入多条新闻标题信息到数据库
+            pstmt = conn.prepareStatement("insert into title (id,titlename,creator,createtime) values (?,?,?,? )");
+            pstmt.setInt(1, 1);
+            pstmt.setString(2, "政治");
+            pstmt.setString(3, "管理员");
+            pstmt.setDate(4, new Date(new java.util.Date().getTime()));
+            pstmt.executeUpdate();
+
+            pstmt.setInt(1, 2);
+            pstmt.setString(2, "军事");
+            pstmt.setString(3, "管理员");
+            pstmt.setDate(4, new Date(new java.util.Date().getTime()));
+            pstmt.executeUpdate();
+
+            System.out.println("插入新闻标题信息成功");
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             // 4、关闭Statement和数据库连接
             try {
-                if (null != rs) {
-                    rs.close();
-                }
-                if (null != stmt) {
-                    stmt.close();
+                if (null != pstmt) {
+                    pstmt.close();
                 }
                 if (null != conn) {
                     conn.close();

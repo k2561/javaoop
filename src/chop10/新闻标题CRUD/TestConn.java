@@ -1,4 +1,4 @@
-package chop10.JDBC;
+package chop10.新闻标题CRUD;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,51 +1,39 @@
-package chop10.新闻标题CRUD;
+package chop10.JDBC;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import org.apache.log4j.Logger;
-//import cn.jbit.jdbctest.Test5;
-/**
- * 查询新闻标题信息。
- */
-public class TestQuery {
 
+/**
+ * 使用Statement的executeUpdate()方法更新狗狗信息。
+ */
+public class Test4 {
+    private static Logger logger = Logger.getLogger(Test4.class.getName());
     public static void main(String[] args) {
         Connection conn = null;
         Statement stmt = null;
-        ResultSet rs = null;
         // 1、加载驱动
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            logger.error(e);
         }
         try {
             // 2、建立连接
             conn = DriverManager.getConnection(
-                    "jdbc:sqlserver://localhost:1433;DatabaseName=news",
+                    "jdbc:sqlserver://localhost:1433;DatabaseName=epet",
                     "jbit", "bdqn");
-            // 3、查询并输出新闻标题信息
+            // 3、更新狗狗信息到数据库
             stmt = conn.createStatement();
-            rs = stmt.executeQuery("select * from title");
-            System.out.println("\t\t新闻标题列表");
-            System.out.println("编号\t标题\t创建者\t创建时间");
-            while (rs.next()) {
-                System.out.print(rs.getInt(1)+"\t");
-                System.out.print(rs.getString(2)+"\t");
-                System.out.print(rs.getString(3)+"\t");
-                System.out.println(rs.getDate(4));
-            }
+            stmt.executeUpdate("update dog set health=80,love=15 where id=1");
+            logger.info("成功更新狗狗信息！");
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error(e);
         } finally {
             // 4、关闭Statement和数据库连接
             try {
-                if (null != rs) {
-                    rs.close();
-                }
                 if (null != stmt) {
                     stmt.close();
                 }
@@ -53,7 +41,7 @@ public class TestQuery {
                     conn.close();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+                logger.error(e);
             }
         }
     }
