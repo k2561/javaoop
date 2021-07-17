@@ -1,4 +1,4 @@
-package chop10.新闻标题CRUD;
+package chop10.JDBC;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,12 +6,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import org.apache.log4j.Logger;
-import chop10.JDBC.Test5;
 /**
- * 查询新闻标题信息。
+ * 使用Statement的executeQuery()方法查询并输出狗狗信息。
  */
-public class TestQuery {
-
+public class Test5 {
+    private static Logger logger = Logger.getLogger(Test5.class.getName());
     public static void main(String[] args) {
         Connection conn = null;
         Statement stmt = null;
@@ -20,26 +19,27 @@ public class TestQuery {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            logger.error(e);
         }
         try {
             // 2、建立连接
             conn = DriverManager.getConnection(
-                    "jdbc:sqlserver://localhost:1433;DatabaseName=news",
+                    "jdbc:sqlserver://localhost:1433;DatabaseName=epet",
                     "jbit", "bdqn");
-            // 3、查询并输出新闻标题信息
+            // 3、查询并输出狗狗信息
             stmt = conn.createStatement();
-            rs = stmt.executeQuery("select * from title");
-            System.out.println("\t\t新闻标题列表");
-            System.out.println("编号\t标题\t创建者\t创建时间");
+            rs = stmt.executeQuery("select * from dog");
+            System.out.println("\t\t狗狗信息列表");
+            System.out.println("编号\t姓名\t健康值\t亲密度\t品种");
             while (rs.next()) {
                 System.out.print(rs.getInt(1)+"\t");
                 System.out.print(rs.getString(2)+"\t");
-                System.out.print(rs.getString(3)+"\t");
-                System.out.println(rs.getDate(4));
+                System.out.print(rs.getInt("health")+ "\t");
+                System.out.print(rs.getInt("love")+"\t");
+                System.out.println(rs.getString("strain"));
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error(e);
         } finally {
             // 4、关闭Statement和数据库连接
             try {
@@ -53,9 +53,8 @@ public class TestQuery {
                     conn.close();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+                logger.error(e);
             }
         }
     }
 }
-
