@@ -21,8 +21,7 @@ public class Test1 {
 
         // 2、建立连接
         try {
-            conn = DriverManager.getConnection("jdbc:odbc:conn_epet",
-                    "jbit", "bdqn");
+            conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/ssl","root","y1216177");
             System.out.println("建立连接成功！");
         } catch (SQLException e) {
             logger.error(e);

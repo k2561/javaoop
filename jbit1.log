@@ -12,3 +12,32 @@
 2021-07-13 15:08:14chop8.异常处理.Test11.main(Test11.java:28) Test11.java ERROR / by zero
 2021-07-17 19:21:43chop10.JDBC.Test3.main(Test3.java:25) Test3.java ERROR java.lang.ClassNotFoundException: com.microsoft.sqlserver.jdbc.SQLServerDriver
 2021-07-17 19:21:43chop10.JDBC.Test3.main(Test3.java:43) Test3.java ERROR java.sql.SQLException: No suitable driver found for jdbc:sqlserver://localhost:1433;DatabaseName=epet
+2021-07-21 17:33:31chop10.JDBC.Test4.main(Test4.java:21) Test4.java ERROR java.lang.ClassNotFoundException: com.microsoft.sqlserver.jdbc.SQLServerDriver
+2021-07-21 17:33:32chop10.JDBC.Test4.main(Test4.java:33) Test4.java ERROR java.sql.SQLException: No suitable driver found for jdbc:sqlserver://localhost:1433;DatabaseName=epet
+2021-07-21 17:38:34chop10.JDBC.Test4.main(Test4.java:21) Test4.java ERROR java.lang.ClassNotFoundException: com.microsoft.sqlserver.jdbc.SQLServerDriver
+2021-07-21 17:38:34chop10.JDBC.Test4.main(Test4.java:33) Test4.java ERROR java.sql.SQLNonTransientConnectionException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: Failed to parse the host:port pair 'localhost:3306;DatabaseName=epet'.
+2021-07-21 17:38:47chop10.JDBC.Test4.main(Test4.java:21) Test4.java ERROR java.lang.ClassNotFoundException: com.microsoft.sqlserver.jdbc.SQLServerDriver
+2021-07-21 17:38:47chop10.JDBC.Test4.main(Test4.java:33) Test4.java ERROR java.sql.SQLException: No suitable driver found for jdbc:sqlserver://localhost:1433;DatabaseName=epet
+2021-07-21 17:58:46chop10.JDBC.Test1.main(Test1.java:19) Test1.java ERROR java.lang.ClassNotFoundException: sun.jdbc.odbc.JdbcOdbcDriver
+2021-07-21 17:58:47chop10.JDBC.Test1.main(Test1.java:28) Test1.java ERROR java.sql.SQLException: No suitable driver found for jdbc:odbc:conn_epet
+2021-07-21 17:59:20chop10.JDBC.Test1.main(Test1.java:19) Test1.java ERROR java.lang.ClassNotFoundException: sun.jdbc.odbc.JdbcOdbcDriver
+2021-07-21 17:59:20chop10.JDBC.Test1.main(Test1.java:28) Test1.java ERROR java.sql.SQLException: No suitable driver found for jdbc:odbc:conn_epet
+2021-07-21 18:03:03chop10.JDBC.Test1.main(Test1.java:19) Test1.java ERROR java.lang.ClassNotFoundException: sun.jdbc.odbc.JdbcOdbcDriver
+2021-07-21 18:03:04chop10.JDBC.Test1.main(Test1.java:27) Test1.java ERROR java.sql.SQLException: The server time zone value '�й���׼ʱ��' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+2021-07-21 18:06:20chop10.JDBC.Test1.main(Test1.java:19) Test1.java ERROR java.lang.ClassNotFoundException: sun.jdbc.odbc.JdbcOdbcDriver
+2021-07-21 18:06:20chop10.JDBC.Test1.main(Test1.java:27) Test1.java ERROR java.sql.SQLException: The server time zone value '�й���׼ʱ��' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+2021-07-21 18:06:50chop10.JDBC.Test1.main(Test1.java:19) Test1.java ERROR java.lang.ClassNotFoundException: sun.jdbc.odbc.JdbcOdbcDriver
+2021-07-21 18:06:51chop10.JDBC.Test1.main(Test1.java:27) Test1.java ERROR java.sql.SQLException: The server time zone value '�й���׼ʱ��' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+2021-07-21 18:06:59chop10.JDBC.Test2.main(Test2.java:23) Test2.java ERROR java.lang.ClassNotFoundException: com.microsoft.sqlserver.jdbc.SQLServerDriver
+2021-07-21 18:06:59chop10.JDBC.Test2.main(Test2.java:32) Test2.java ERROR java.sql.SQLException: No suitable driver found for jdbc:sqlserver://localhost:1433;DatabaseName=epet
+2021-07-21 18:07:32chop10.JDBC.Test2.main(Test2.java:23) Test2.java ERROR java.lang.ClassNotFoundException: com.microsoft.sqlserver.jdbc.SQLServerDriver
+2021-07-21 18:07:32chop10.JDBC.Test2.main(Test2.java:32) Test2.java ERROR java.sql.SQLException: No suitable driver found for jdbc:sqlserver://localhost:1433;DatabaseName=SSL
+2021-07-21 18:08:23chop10.JDBC.Test2.main(Test2.java:23) Test2.java ERROR java.lang.ClassNotFoundException: com.microsoft.sqlserver.jdbc.SQLServerDriver
+2021-07-21 18:08:23chop10.JDBC.Test2.main(Test2.java:32) Test2.java ERROR java.sql.SQLException: No suitable driver found for mysql://localhost:3306;DatabaseName=SSL
+2021-07-21 18:08:33chop10.JDBC.Test2.main(Test2.java:23) Test2.java ERROR java.lang.ClassNotFoundException: com.microsoft.sqlserver.jdbc.SQLServerDriver
+2021-07-21 18:08:39chop10.JDBC.Test2.main(Test2.java:23) Test2.java ERROR java.lang.ClassNotFoundException: com.microsoft.sqlserver.jdbc.SQLServerDriver
+2021-07-21 18:08:39chop10.JDBC.Test2.main(Test2.java:32) Test2.java ERROR java.sql.SQLException: No suitable driver found for mysql://localhost:3306;DatabaseName=SSL
+2021-07-21 18:09:01chop10.JDBC.Test2.main(Test2.java:23) Test2.java ERROR java.lang.ClassNotFoundException: com.microsoft.sqlserver.jdbc.SQLServerDriver
+2021-07-21 18:09:02chop10.JDBC.Test2.main(Test2.java:32) Test2.java ERROR java.sql.SQLNonTransientConnectionException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: Failed to parse the host:port pair 'localhost:3306;DatabaseName=SSL'.
+2021-07-21 18:12:59chop10.JDBC.Test2.main(Test2.java:23) Test2.java ERROR java.lang.ClassNotFoundException: com.microsoft.sqlserver.jdbc.SQLServerDriver
+2021-07-21 18:12:59chop10.JDBC.Test2.main(Test2.java:32) Test2.java ERROR java.sql.SQLNonTransientConnectionException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: Failed to parse the host:port pair 'localhost:3306;DatabaseName=SSL'.
