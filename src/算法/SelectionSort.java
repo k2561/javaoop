@@ -1,4 +1,4 @@
-package 算法.插入排序;
+package 算法;
 
 /**
  * 选择排序
@@ -24,12 +24,12 @@ public class SelectionSort {
     }
     public static void main(String[] args) {
 
-        int[] arr = {10,9,8,7,6,5,4,3,2,1};
-        SelectionSort.sort(arr);
+        int N = 20000;
+        Integer[] arr = SortTestHelper.generateRandomArray(N, 0, 100000);
+        InsertionSort.sort(arr);
         for( int i = 0 ; i < arr.length ; i ++ ){
             System.out.print(arr[i]);
             System.out.print(' ');
         }
-        System.out.println();
     }
 }

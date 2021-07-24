@@ -1,4 +1,4 @@
-package 算法.插入排序;
+package 算法;
 
 
 public class SortTestHelper {
@@ -28,4 +28,5 @@ public class SortTestHelper {
 
         return;
     }
+
 }
